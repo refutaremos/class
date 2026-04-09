@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Operações básicas em cpp
+
 int main() {
     double num1, num2;
     char operacao;
