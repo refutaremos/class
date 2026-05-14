@@ -1,17 +1,17 @@
-// Imprima o nome do usuário 10 vezes usando usando while
-
 #include <iostream>
 #include <string>
 
 int main() {
     std::string nome;
-    std::cout << "Digite seu nome: ";
-    std::cin >> nome;
+    int n;
 
-    int i = 0;
-    while (i < 10) {
+    std::cout << "Digite um nome: ";
+    std::cin >> nome;
+    std::cout << "Digite um numero N: ";
+    std::cin >> n;
+
+    for (int i = 0; i < n; i++) {
         std::cout << nome << std::endl;
-        i++;
     }
 
     return 0;
