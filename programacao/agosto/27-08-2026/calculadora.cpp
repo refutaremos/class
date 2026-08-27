@@ -5,10 +5,10 @@
 using namespace std;
 
 // Prototipo
-auto soma(int a, int b);
-auto subtracao(int a, int b);
-auto multiplicacao(int a, int b);
-auto divisao(int a, int b);
+float soma(int a, int b);
+float subtracao(int a, int b);
+float multiplicacao(int a, int b);
+float divisao(int a, int b);
 
 int main(void) {
     cout << "Calculadora" << endl;
@@ -45,19 +45,19 @@ int main(void) {
     return 0;
 }
 
-auto soma(int a, int b) {
+float soma(int a, int b) {
     return a + b;
 }
 
-auto subtracao(int a, int b) {
+float subtracao(int a, int b) {
     return a - b;
 }
 
-auto multiplicacao(int a, int b) {
+float multiplicacao(int a, int b) {
     return a * b;
 }
 
-auto divisao(int a, int b) {
+float divisao(int a, int b) {
     if (b == 0) {
         cout << "Erro: Nao pode dividir por zero" << endl;
         return 0;
