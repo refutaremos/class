@@ -11,6 +11,7 @@ float soma(int a, int b);
 float subtracao(int a, int b);
 float multiplicacao(int a, int b);
 float divisao(int a, int b);
+void menu();
 
 int main(void) {
     cout << "Calculadora" << endl;
