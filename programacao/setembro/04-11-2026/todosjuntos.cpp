@@ -11,11 +11,12 @@ double calculaMedia(double n1, double n2, double n3, char tipo) {
 	} else if (tipo == 'P') {
 		return (n1 * 5 + n2 * 3 + n3 * 2) / 10.0;
 	} else {
+        // Nota harmonica, tambem obtido por fonte externa
 		return 3.0 / ((1.0 / n1) + (1.0 / n2) + (1.0 / n3));
 	}
 }
 
-double raizQuadrada(double n) {
+double raizQuadrada(double n) { // Obtido por fonte externa, metodo da babilonia (ou metodo de Heron)
 	if (n <= 0) return 0;
 	double x = n;
 	double y = 1;
@@ -29,6 +30,7 @@ double raizQuadrada(double n) {
 void bhaskara(double a, double b, double c) {
 	double delta = (b * b) - (4 * a * c);
 	if (a == 0 || delta < 0) {
+        // Se a for 0 ou delta for negativo, nao podemos calcular as raizes
 		cout << "Nao e possivel calcular as raizes." << endl;
 	} else {
 		double raiz = raizQuadrada(delta);
@@ -46,10 +48,12 @@ void converteTempo(int totalSegundos) {
 }
 
 int idadeParaDias(int anos, int meses, int dias) {
+    // Calcula a idade total em dias, considerando anos, meses e dias fornecidos, se foram fornecidos.
 	return (anos * 365) + (meses * 30) + dias;
 }
 
-bool ehPerfeito(int n) {
+bool numeroPerfeito(int n) {
+    // Verifica se um numero e perfeito (soma dos divisores iguais ao numero)
 	int soma = 0;
 	for (int i = 1; i < n; i++) {
 		if (n % i == 0) {
@@ -144,7 +148,7 @@ int main() {
 				int n;
 				cout << "Digite um numero: ";
 				cin >> n;
-				if (ehPerfeito(n)) cout << "O numero e perfeito." << endl;
+				if (numeroPerfeito(n)) cout << "O numero e perfeito." << endl;
 				else cout << "O numero nao e perfeito." << endl;
 				break;
 			}
